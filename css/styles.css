@@ -21,12 +21,23 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  min-height: 100vh;
+}
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -69,6 +80,10 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+.header-container {
+  border-bottom: 1px solid #ececec;
+}
+
 .logo {
   color: var(--title-text-color);
   font-family: Raleway;
@@ -163,6 +178,7 @@ img {
 }
 .features {
   display: flex;
+  padding-top: 94px;
 }
 .features-item:not(:last-child) {
   margin-right: 30px;
@@ -187,15 +203,16 @@ img {
 
   display: flex;
 }
-.example {
+.pattern {
   display: flex;
+  justify-content: space-between;
 }
-.example-item {
-  display: inline-block;
+.pattern-item {
+  display: block;
 }
-.example-item:not(:last-child) {
+/* .pattern-item:not(:last-child) {
   margin-right: 30px;
-}
+} */
 .team {
   display: flex;
 }
@@ -233,7 +250,14 @@ img {
   margin-right: 30px;
 }
 .hiden {
-  visibility: hidden;
+  clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
 }
 /* footer */
 .footer .logo {
@@ -243,14 +267,21 @@ img {
   background-color: var(--second-bg-color);
   padding-top: 60px;
 }
-.footer-nav {
-  color: rgba(255, 255, 255, 0.6);
+.footer-nav li:last-child {
+  margin-bottom: 60px;
 }
+.footer-nav {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  padding-bottom: 9px;
+}
+
 .address {
   color: var(--white-color);
   font-style: normal;
 
-  margin-top: 20px;
+  padding-top: 20px;
+  margin-bottom: 9px;
 }
 
 /* portfolio */
@@ -261,9 +292,13 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
 
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 20px 24px 4px 24px;
+  /* margin-top: 20px;
+  margin-bottom: 4px; */
+}
+.example-items {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin-bottom: 30px;
 }
 .example-content {
   color: var(--primary-text-color);
@@ -273,12 +308,15 @@ img {
 
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0 24px 20px 24px;
+}
+.example-work {
+  margin: 20px 24px 20px 24px;
 }
 .filter-item {
   display: inline-block;
   text-align: center;
   margin-right: 8px;
+  border: none;
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -292,26 +330,32 @@ img {
   font-size: 16px;
   line-height: 1.63;
   border-radius: 4px;
+  border-color: var(--third-bg-color);
 
   padding: 6px 22px;
 }
 .filter {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  padding-top: 94px;
 }
 .example {
   margin: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
+  /* margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap)); */
   justify-content: center;
+  margin-bottom: -30px;
 }
+
 .example > .example-item {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
 }
 .example-items:not(:nth-child(3n)) {
-  margin-right: 30px;
+  margin-right: 24px;
+}
+.line {
 }
