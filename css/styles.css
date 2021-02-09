@@ -296,7 +296,9 @@ img {
   margin-bottom: 4px; */
 }
 .example-items {
-  width: 370px;
+  /* width: 370px; */
+
+  flex-basis: calc((100% - 60px) / 3);
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   margin-bottom: 30px;
@@ -348,12 +350,9 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
-/* 
-.example > .example-item {
-  flex-basis: calc(100% / 3 - var(--card-set-gap));
-} */
+
 .example-items:nth-child(3n) {
-  margin-right: 0; /* из-за бордеров трех имеджев по 1 пикселю */
+  margin-right: 0;
 }
 .example-items:nth-last-child(-n + 3) {
   margin-bottom: 0;
