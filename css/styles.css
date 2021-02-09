@@ -48,7 +48,7 @@ img {
   margin: 0 auto;
 }
 .section {
-  padding-bottom: 94px;
+  padding-top: 94px;
 }
 .hero {
   padding-top: 200px;
@@ -239,7 +239,7 @@ img {
 }
 .team-style {
   background-color: var(--third-bg-color);
-  padding-top: 94px;
+  margin-top: 94px;
 }
 .team-member {
   background-color: var(--white-color);
@@ -266,9 +266,7 @@ img {
 .footer {
   background-color: var(--second-bg-color);
   padding-top: 60px;
-}
-.footer-nav li:last-child {
-  margin-bottom: 60px;
+  padding-bottom: 60px;
 }
 .footer-nav {
   display: block;
@@ -314,7 +312,7 @@ img {
   margin-bottom: 0;
 }
 .example-work {
-  margin: 20px 24px 20px 24px;
+  padding: 20px 24px 20px 24px;
 }
 .filter-item {
   display: inline-block;
@@ -341,8 +339,7 @@ img {
 .filter {
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
-  padding-top: 94px;
+  margin-bottom: 50px;
 }
 .example {
   margin: 0;
