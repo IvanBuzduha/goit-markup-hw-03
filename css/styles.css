@@ -80,7 +80,7 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-.header-container {
+.page-header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -178,7 +178,6 @@ img {
 }
 .features {
   display: flex;
-  padding-top: 94px;
 }
 .features-item:not(:last-child) {
   margin-right: 30px;
